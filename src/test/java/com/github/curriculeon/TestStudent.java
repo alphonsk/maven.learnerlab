@@ -4,12 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestStudent {
-    /*
-
-
-Create a testLearn method that ensures a Student's totalStudyTime instance variable is incremented by the specified numberOfHours by invoking the .learn method.
-     */
-
 
     //given
     private void testInstanceOf() {
@@ -31,13 +25,18 @@ Create a testLearn method that ensures a Student's totalStudyTime instance varia
         double expectedStudyTime = currentStudyTime + 10;
 
         // then
-        Assert.assertEquals(expectedStudyTime, );
+        Assert.assertEquals(incrementedStudyTime, expectedStudyTime, 0);
 
     }
 
     @Test
     public void instanceofTest() {
         testInstanceOf() ;
+    }
+
+    @Test
+    public void testLearnTest() {
+        testLearn() ;
     }
 
 
