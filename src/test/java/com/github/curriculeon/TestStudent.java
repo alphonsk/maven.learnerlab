@@ -17,12 +17,13 @@ public class TestStudent {
     //given
     private void testLearn ( ) {
         Student student = new Student(1, "quan");
+        double numberOfHoursToLearn = 101 ;
+        double currentStudyTime = student.getTotalStudyTime();
+        double expectedStudyTime = currentStudyTime + numberOfHoursToLearn;
 
         // when
-        double currentStudyTime = student.getTotalStudyTime();
-        student.learn(10);
+        student.learn(numberOfHoursToLearn);
         double incrementedStudyTime = student.getTotalStudyTime();
-        double expectedStudyTime = currentStudyTime + 10;
 
         // then
         Assert.assertEquals(incrementedStudyTime, expectedStudyTime, 0);
